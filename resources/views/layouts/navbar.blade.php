@@ -1,66 +1,33 @@
-<nav class=" navbar navbar-expand-lg py-3 fixed-top  {{ Request::segment(1) == '' ? '' : ' shadow  ' }}">
-    <div class="container">
-        <a class="navbar-brand" href="/">
-            <img src="{{ asset('assets/icons/ic-logo.png') }}" height="55" width="55" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                <li class="nav-item">
-                    <a class="nav-link active text-nav-active" aria-current="page" href="/">Home</a>
-                </li>
-                <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle text-nav-active" href="#" id="navbarDropdownMenuLink"
-                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Profile
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink ">
-                        <li><a class="dropdown-item" href="{{ route('visimisi') }}">Visi Misi</a></li>
-                        <li><a class="dropdown-item" href="{{ route('sejarah') }}">Sejarah Sekolah</a></li>
-                        <li><a class="dropdown-item" href="{{ route('prestasi') }}">Prestasi</a></li>
+<header id="header" class="header d-flex align-items-center">
 
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <img src="{{ asset('assets/icons/ic-logo.png') }}" width="45" alt="">
+            <h1 style="font-size:24px">SDN<span>173551</span></h1>
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li class="dropdown"><a href="#"><span>Profile</span> <i
+                            class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="{{ route('visimisi') }}">Visi Misi</a></li>
+                        <li><a href="{{ route('sejarah') }}">Sejarah</a></li>
+                        <li><a href="{{ route('prestasi') }}">Prestasi</a></li>
                     </ul>
                 </li>
-                {{-- <li class="nav-item"> --}}
-                {{-- <a class="nav-link active text-nav-active" aria-current="page" --}}
-                {{-- href="{{ route('berita') }}">Galery</a> --}}
-                {{-- </li>// --}}
-                <li class="nav-item">
-
-                    <a class="nav-link active text-nav-active" aria-current="page"
-                        href="{{ route('galeri') }}">Galery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-nav-active" aria-current="page"
-                        href="{{ route('tenagaKerja') }}">Tenaga Kerja</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-nav-active" aria-current="page"
-                        href="{{ route('pengumuman') }}">Pengumuman</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-nav-active" aria-current="page" href="{{ route('saran') }}">Saran</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-nav-active" aria-current="page"
-                        href="{{ route('kontak') }}">Kontak</a>
-                </li>
-
-
+                <li><a href="{{ route('galeri') }}">Galery</a></li>
+                <li><a href="{{ route('tenagaKerja') }}">Tenaga Kerja</a></li>
+                <li><a href="{{ route('pengumuman') }}">Pengumuman</a></li>
+                <li><a href="{{ route('saran') }}">Saran</a></li>
+                <li><a href="{{ route('kontak') }}">Kontak</a></li>
             </ul>
-            <div class="d-flex">
-                @auth
-                    <form action="/logout" method="POST">
-                        @csrf
-                        <button class="btn btn-dark" type="submit">Logout</button>
-                    </form>
-                @else
-                    <a class="btn btn-danger" href="{{ route('login') }}">Login</a>
-                @endauth
-            </div>
-        </div>
+        </nav><!-- .navbar -->
+
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
     </div>
-</nav>
+</header><!-- End Header -->

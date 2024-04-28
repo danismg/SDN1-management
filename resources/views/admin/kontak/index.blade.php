@@ -1,8 +1,8 @@
-@extends('layouts.layouts')
+@extends('admin.layouts.layouts')
 
 @section('content')
     {{-- kontak --}}
-    <section style="margin-top: 100px">
+    <section style="">
         <div class="container col-xxl-8 py-5">
             <h4 class="fw-bold mb-3">Management kontak</h4>
 
@@ -37,7 +37,8 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>kontak</th>
+                            <th>Media Sosial</th>
+                            <th>Akun</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>

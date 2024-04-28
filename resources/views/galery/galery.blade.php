@@ -1,13 +1,17 @@
 @extends('layouts.layouts')
 
 @section('content')
-    {{-- Kegiatan --}}
-    <section id="berita" style="margin-top: 50px" class="py-5">
-        <div class="header-berita text-center">
-            <h2 class="fw-bold mb-5 mt-5">Kegiatan Sekolah</h2>
-            <div class="container" data-aos="fade-up">
-                <div class="row gy-4 portfolio-container">
+    <!-- ======= Kegiatan Section ======= -->
+    <section id="portfolio" class="portfolio sections-bg">
+        <div class="container" data-aos="fade-up">
 
+            <div class="section-header">
+                <h2>Kegiatan Sekolah</h2>
+            </div>
+
+            <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
+                data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4 portfolio-container">
                     @foreach ($kegiatans as $item)
                         <div class="col-xl-4 col-md-6 portfolio-item filter-app">
                             <div class="portfolio-wrap">
@@ -16,25 +20,29 @@
                                         src="{{ asset('storage/kegiatan/' . $item->image) }}" class="img-fluid"
                                         alt=""></a>
                                 <div class="portfolio-info">
-                                    <h4 class="text-dark text-start"><a href="portfolio-details.html"
-                                            title="More Details">{{ $item->judul }}</a></h4>
-
+                                    <h4><a title="More Details">{{ $item->judul }}</a></h4>
+                                    {{-- <p>Lorem ipsum, dolor sit amet consectetur</p> --}}
                                 </div>
                             </div>
                         </div><!-- End Portfolio Item -->
                     @endforeach
-                </div>
+                </div><!-- End Portfolio Container -->
             </div>
+
         </div>
-    </section>
+    </section><!-- End Kegiatan Section -->
 
-    {{-- Fasiltas --}}
-    <section id="berita" style="margin-top: 50px" class="py-5">
-        <div class="header-berita text-center">
-            <h2 class="fw-bold mb-5 mt-5">Fasiltas Sekolah</h2>
-            <div class="container" data-aos="fade-up">
+    <!-- ======= Fasilitas Section ======= -->
+    <section id="portfolio" class="portfolio sections-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header">
+                <h2>Fasilitas Sekolah</h2>
+            </div>
+
+            <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
+                data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
                 <div class="row gy-4 portfolio-container">
-
                     @foreach ($fasilitas as $item)
                         <div class="col-xl-4 col-md-6 portfolio-item filter-app">
                             <div class="portfolio-wrap">
@@ -43,15 +51,15 @@
                                         src="{{ asset('storage/fasilitas/' . $item->image) }}" class="img-fluid"
                                         alt=""></a>
                                 <div class="portfolio-info">
-                                    <h4 class="text-dark text-start"><a href="portfolio-details.html"
-                                            title="More Details">{{ $item->judul }}</a></h4>
-
+                                    <h4><a title="More Details">{{ $item->judul }}</a></h4>
+                                    {{-- <p>Lorem ipsum, dolor sit amet consectetur</p> --}}
                                 </div>
                             </div>
                         </div><!-- End Portfolio Item -->
                     @endforeach
-                </div>
+                </div><!-- End Portfolio Container -->
+
             </div>
         </div>
-    </section>
+    </section><!-- End Fasilitas Section -->
 @endsection

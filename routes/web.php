@@ -32,21 +32,10 @@ Route::get('/detail/{slug}', [AppController::class, 'detail'])->name('detail');
 Route::get('/pengumuman/{slug}', [AppController::class, 'pengumumanSlug'])->name('pengumumanSlug');
 Route::get('/prestasi/{slug}', [AppController::class, 'prestasiSlug'])->name('prestasiSlug');
 
-Route::get('/detail', function () {
-    return view('berita/detail');
+Route::get('/test', function () {
+    return view('text');
 });
 
-Route::get('/foto', function () {
-    return view('foto/foto');
-});
-
-Route::get('/galery', function () {
-    return view('galery/galery');
-})->name('galery');
-
-Route::get('/saran', function () {
-    return view('saran/saran');
-})->name('saran');
 
 Route::get('/login', function () {
     return view('auth/login');

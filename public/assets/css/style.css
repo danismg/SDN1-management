@@ -5,6 +5,11 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+.header-admin{
+    background-color: white;
+    padding-top: 50px;
+    margin-bottom:100px;
+}
 
 /* public/css/style.css */
 .form-section {

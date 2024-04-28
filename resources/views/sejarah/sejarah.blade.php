@@ -2,10 +2,10 @@
 
 @section('content')
     @foreach ($sejarah as $item)
-        <section id="berita" style="margin-top: 50px" class="py-5">
-            <div class="container py-5">
+        <section id="berita">
+            <div class="container ">
 
-                <div class="header-berita text-center">
+                <div class="section-header">
                     <h2 class="fw-bold mb-5">Sejarah Sekolah</h2>
                 </div>
                 <div class="konten-berita">

@@ -1,32 +1,35 @@
 @extends('layouts.layouts')
 
 @section('content')
-    <section id="berita" style="margin-top: 50px" class="py-5">
-        <div class="container py-5">
+    <!-- ======= Pengumuman Section ======= -->
+    <section id="portfolio" class="portfolio sections-bg">
+        <div class="container" data-aos="fade-up">
 
-            <div class="header-berita text-center">
-                <h2 class="fw-bold ">Pengumuman Sekolah</h2>
+            <div class="section-header">
+                <h2>Pengumuman Sekolah</h2>
             </div>
 
-            <div class="row py-5 ">
-                @foreach ($pengumumans as $pengumuman)
-                    <div class="col-lg-4 mb-5">
-                        <div class="card border-0 member text-start">
-                            <img class="img-fluid mb-3" src="{{ asset('storage/pengumuman/' . $pengumuman->image) }}"
-                                alt="">
-                            <div class="konten-berita">
-                                <p class="mb-3 text-secondary">#cantik</p>
-                                <h4 class="fw-bold mb-3 text-dark">{{ $pengumuman->judul }}</h4>
-                                <p class="text-secondary">#pesantrenmodern</p>
-                                <a href="/pengumuman/{{ $pengumuman->slug }}"
-                                    class="text-decoration-none text-danger">Selengkapnya</a>
+            <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
+                data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4 portfolio-container">
+                    @foreach ($pengumumans as $item)
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                            <div class="portfolio-wrap">
+                                <a href="{{ asset('storage/pengumuman/' . $item->image) }}"
+                                    data-gallery="portfolio-gallery-app" class="glightbox"><img
+                                        src="{{ asset('storage/pengumuman/' . $item->image) }}" class="img-fluid"
+                                        alt=""></a>
+                                <div class="portfolio-info">
+                                    <h4><a title="More Details">{{ $item->judul }}</a>
+                                    </h4>
+                                    <p><a href="/pengumuman/{{ $item->slug }}">Baca selengkapnya...</a></p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                @endforeach
+                        </div><!-- End Portfolio Item -->
+                    @endforeach
+                </div><!-- End Portfolio Container -->
             </div>
-
 
         </div>
-    </section>
+    </section><!-- End Pengumuman Section -->
 @endsection

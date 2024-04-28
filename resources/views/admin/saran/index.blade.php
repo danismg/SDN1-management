@@ -1,21 +1,18 @@
-@extends('layouts.layouts')
+@extends('admin.layouts.layouts')
 
 @section('content')
-    @php
-        // dd(get_defined_vars());
-    @endphp
-    <section style="margin-top: 100px">
+    <section style="">
         <div class="container col-xxl-8 py-5">
-            <h4 class="fw-bold mb-3">Management Artikel</h4>
+            <h4 class="fw-bold mb-3">Management Saran</h4>
 
 
 
             {{-- Pesan Sukses --}}
             @if (session()->has('success'))
-                <div class="alert alert-success alert-dismissible fade show  gap-3" role="alert">
+                <div id="successAlert" class="alert alert-success alert-dismissible fade show gap-3" role="alert">
                     <strong class="me-3">Informasi </strong> <strong class="me-3"> : </strong>{{ session('success') }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
-                        data-bs-target=".alert"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"
+                        data-bs-target="#successAlert"></button>
                 </div>
             @endif
 

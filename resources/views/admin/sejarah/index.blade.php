@@ -1,9 +1,12 @@
-@extends('layouts.layouts')
+@extends('admin.layouts.layouts')
 
 @section('content')
-    <section style="margin-top: 100px">
+    <section style="">
         <div class="container col-xxl-8 py-5">
             <h4 class="fw-bold mb-3">Management Sejarah</h4>
+            @foreach ($artikels as $artikel)
+                <a href="{{ route('atursejarah.edit', $artikel->id) }}" class="btn btn-warning">Edit</a>
+            @endforeach
 
             {{-- Pesan Sukses --}}
             @if (session()->has('success'))
@@ -19,8 +22,7 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Sejarah</th>
-                            <th>Aksi</th>
+                            <th>Deskripsi Sejarah</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,10 +31,7 @@
                                 <td style="white-space: normal;">
                                     {!! $artikel->desc !!}
                                 </td>
-                                <td>
-                                    <a href="{{ route('atursejarah.edit', $artikel->id) }}" class="btn btn-warning">Edit</a>
 
-                                </td>
                             </tr>
                         @endforeach
                     </tbody>

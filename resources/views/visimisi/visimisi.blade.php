@@ -1,20 +1,24 @@
 @extends('layouts.layouts')
 
 @section('content')
-    <section id="berita" style="margin-top: 50px" class="py-5">
+    <section id="berita">
         <br>
-        <div class="container py-5">
+        <div class="container">
 
             <div class="header-berita text-center">
-                <h2 class="fw-bold mb-5">VISI</h2>
+                <div class="section-header">
+                    <h2>Visi Sekolah</h2>
+                </div>
                 @foreach ($visi as $visi)
                     <h5 class="">"
                         {{ $visi->visi }}"
                     </h5>
                 @endforeach
-                <h2 class="fw-bold mb-5 mt-5">MISI</h2>
+                <div class="py-5 section-header">
+                    <h2>Misi Sekolah</h2>
+                </div>
 
-                <div class="text-start px-5">
+                <div class="text-start ">
                     <ul class="px-5">
                         @foreach ($misi as $misi)
                             <li>

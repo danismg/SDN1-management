@@ -1,8 +1,8 @@
-@extends('layouts.layouts')
+@extends('admin.layouts.layouts')
 
 @section('content')
     {{-- Visi --}}
-    <section style="margin-top: 100px">
+    <section style="">
         <div class="container col-xxl-8 py-5">
             <h4 class="fw-bold mb-3">Management Visi</h4>
 
@@ -135,7 +135,7 @@
 
 
     {{-- Misi --}}
-    <section style="margin-top: 100px">
+    <section>
         <div class="container col-xxl-8 py-5">
             <h4 class="fw-bold mb-3">Management misi</h4>
 

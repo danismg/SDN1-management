@@ -1,7 +1,7 @@
 @extends('layouts.layouts')
 
 @section('content')
-    <section style="margin-top: 100px">
+    <section style="">
         <div class="container col-xxl-6 py-5">
 
             <h3 class="fw-bold mb-3">Login</h3>

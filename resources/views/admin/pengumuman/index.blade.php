@@ -1,12 +1,9 @@
-@extends('layouts.layouts')
+@extends('admin.layouts.layouts')
 
 @section('content')
-    @php
-        // dd(get_defined_vars());
-    @endphp
-    <section style="margin-top: 100px">
+    <section style="">
         <div class="container col-xxl-8 py-5">
-            <h4 class="fw-bold mb-3">Management Artikel</h4>
+            <h4 class="fw-bold mb-3">Management Pengumuman</h4>
 
             <a href="{{ route('pengumumanDashboard.create') }}" class="btn btn-primary mb-3">Buat Pengumuman</a>
 

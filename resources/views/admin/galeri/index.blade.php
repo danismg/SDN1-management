@@ -1,9 +1,9 @@
-@extends('layouts.layouts')
+@extends('admin.layouts.layouts')
 
 @section('content')
 
 
-    <section style="margin-top: 100px">
+    <section style="">
         <div class="container col-xxl-8 py-5">
             <h4 class="fw-bold mb-3 text-dark">Management Kegiatan</h4>
 
@@ -148,7 +148,7 @@
     </div>
 
     {{-- Fasilitas --}}
-    <section style="margin-top: 100px">
+    <section style="">
         <div class="container col-xxl-8 py-5">
             <h4 class="fw-bold mb-3 text-dark">Management Fasilitas</h4>
 

@@ -1,12 +1,11 @@
-@extends('layouts.layouts')
+@extends('admin.layouts.layouts')
 
 @section('content')
-    {{-- Visi --}}
-    <section style="margin-top: 100px">
+    <section style="">
         <div class="container col-xxl-8 py-5">
-            <h4 class="fw-bold mb-3">Management tenagaKerja</h4>
+            <h4 class="fw-bold mb-3">Management Tenaga Kerja</h4>
 
-            <a class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#uploadModal">Upload tenagaKerja</a>
+            <a class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#uploadModal">Upload Tenaga Kerja</a>
 
             {{-- Pesan Sukses --}}
             @if (session()->has('success'))

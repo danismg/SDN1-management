@@ -1,10 +1,7 @@
-@extends('layouts.layouts')
+@extends('admin.layouts.layouts')
 
 @section('content')
-    @php
-        // dd(get_defined_vars());
-    @endphp
-    <section style="margin-top: 100px">
+    <section style="">
         <div class="container col-xxl-8 py-5">
             <h4 class="fw-bold mb-3">Management Prestasi</h4>
 

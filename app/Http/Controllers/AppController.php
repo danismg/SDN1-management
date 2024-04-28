@@ -26,10 +26,10 @@ class AppController extends Controller
     public function index()
     {
         return view('welcome', [
-            'artikels' => Blog::orderBy('id', 'desc')->limit(3)->get(),
-            'photos' => Photo::orderBy('id', 'desc')->limit(3)->get(),
-            'visi' => Visi::orderBy('id', 'desc')->get(),
-            'misi' => Misi::orderBy('id', 'desc')->get()
+            'visi' => Visi::orderBy('id', 'desc')->limit(3)->get(),
+            'misi' => Misi::orderBy('id', 'desc')->limit(3)->get(),
+            'fasilitas' => Fasilitas::orderBy('id', 'desc')->limit(3)->get(),
+            'kegiatan' => Kegiatan::orderBy('id', 'desc')->limit(3)->get(),
         ]);
     }
 
