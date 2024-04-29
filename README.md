@@ -1,66 +1,92 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# SDN1 Management
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Introduction
+This repository contains the source code for a web application built using the Laravel framework. The application serves as a platform for managing various aspects of an organization or institution, including authentication, content management, and administration of resources such as blogs, photos, announcements, and more.
 
-## About Laravel
+## Features
+- **Authentication**: Users can sign in securely to access the application's features based on their roles.
+- **Dashboard**: Authenticated users can access a personalized dashboard displaying relevant information and administrative tools.
+- **Content Management**: Administrators can manage various types of content such as blogs, photos, announcements, and more.
+- **Resource Management**: The application allows for the management of resources like staff information, history, achievements, etc.
+- **Feedback Management**: Users can submit feedback or suggestions, which administrators can review and manage.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Installation
+1. Clone the repository to your local machine.
+   ```bash
+   git clone https://github.com/your/repository.git
+   ```
+2. Navigate to the project directory.
+   ```bash
+   cd project-directory
+   ```
+3. Install dependencies via Composer.
+   ```bash
+   composer install
+   ```
+4. Create a copy of the `.env.example` file and rename it to `.env`.
+5. Generate an application key.
+   ```bash
+   php artisan key:generate
+   ```
+6. Configure the database settings in the `.env` file.
+7. Run database migrations.
+   ```bash
+   php artisan migrate
+   ```
+8. Serve the application.
+   ```bash
+   php artisan serve
+   ```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Usage
+- Access the application through the provided URL after serving it locally.
+- Sign in using the provided authentication system.
+- Explore different sections of the application based on your role.
+- Use the administrative features to manage content, resources, and user feedback.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Description
 
-## Learning Laravel
+This web application serves as the online platform for SD Negeri 173551 Laguboti, providing various features and information about the school. Below is a brief description of each section available in the navbar:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Navbar
+1. **Home**: Displays the school's logo and a welcome message with a link to the "Visi Misi" section. Also includes a button to navigate to the gallery.
+2. **Profile**: Dropdown menu containing:
+   - **Visi Misi**: Vision and mission statement of the school.
+   - **Sejarah Sekolah**: History of SD Negeri 173551 Laguboti.
+   - **Prestasi**: Achievements of the school.
+3. **Tenaga Kerja**: Provides information about the school staff including their names, date of birth, subjects taught, positions, and photos.
+4. **Pengumuman**: Displays announcements with accompanying images.
+5. **Saran**: Allows users to submit feedback or suggestions.
+6. **Contact**: Provides contact information including WhatsApp, Gmail, Facebook, and the school's location on Google Maps.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Sejarah Sekolah
+Provides a detailed description of SD Negeri 173551 Laguboti's history, its role in the community, address, contact email, facilities, schedule, accreditation, and its significance in the education sector.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Prestasi
+Highlights the school's achievements, including its accreditation and notable victories such as winning the Olimpiade Matematika.
 
-## Laravel Sponsors
+### Visi Misi
+Presents the school's vision, which is to excel, have faith, and cultivate culture with high discipline in a comfortable school environment. The mission statement outlines goals related to effective learning, fostering excellence, and helping students realize their full potential.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Pengumuman
+Announcements regarding school events and activities such as holiday schedules, morning exercises, English days, and reading days.
 
-### Premium Partners
+### Contact
+Contact information for the school, including WhatsApp number, Facebook page, Gmail address, and location on Google Maps.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Feel free to explore each section of the website for more detailed information about SD Negeri 173551 Laguboti.
 
 ## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
 
 ## License
+This project is licensed under the [MIT License](LICENSE).
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Credits
+- Built with [Laravel](https://laravel.com/)
+- Created by [Your Name]
+
+## Contact
+For any inquiries or support, please contact [your email].
+
+Feel free to customize this README according to your preferences and add any additional information that might be relevant.
