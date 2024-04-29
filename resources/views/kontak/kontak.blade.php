@@ -32,8 +32,8 @@
 
                 <div class=" py-5 section-header">
                     <h2>Lokasi</h2>
-                    <p>Jln. Ahmad Yani , Desa Pasar Lagubotu
-                        Kec. Laguboti, Kab. Toba
+                    <p>Jln. Ahmad Yani, Desa Pasar Lagubotu
+                        Kec. Laguboti, Kab. Toba,
                         Prov. Sumatera Utara</p>
                 </div>
 
