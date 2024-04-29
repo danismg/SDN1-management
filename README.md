@@ -13,11 +13,11 @@ This repository contains the source code for a web application built using the L
 ## Installation
 1. Clone the repository to your local machine.
    ```bash
-   git clone https://github.com/your/repository.git
+   git clone https://github.com/danismg/SDN1-management
    ```
 2. Navigate to the project directory.
    ```bash
-   cd project-directory
+   cd SDN1-management
    ```
 3. Install dependencies via Composer.
    ```bash
@@ -31,7 +31,7 @@ This repository contains the source code for a web application built using the L
 6. Configure the database settings in the `.env` file.
 7. Run database migrations.
    ```bash
-   php artisan migrate
+   php artisan migrate:fresh --seed
    ```
 8. Serve the application.
    ```bash
@@ -82,11 +82,7 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## License
 This project is licensed under the [MIT License](LICENSE).
 
-## Credits
-- Built with [Laravel](https://laravel.com/)
-- Created by [Your Name]
-
 ## Contact
-For any inquiries or support, please contact [your email].
+For any inquiries or support, please contact danit.balai@gmail.com.
 
 Feel free to customize this README according to your preferences and add any additional information that might be relevant.
