@@ -70,49 +70,6 @@
                                     </form>
                                 </td>
                             </tr>
-                            <!-- Modal Edit -->
-                            <div class="modal fade" id="editModal{{ $item->id }}" tabindex="-1"
-                                aria-labelledby="editModal{{ $item->id }}Label" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="editModal{{ $item->id }}Label">Modal Edit</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-
-                                        <div class="modal-body">
-                                            <form action="{{ route('tenagaKerja.update', $item->id) }}" method="POST"
-                                                enctype="multipart/form-data">
-                                                @csrf
-
-                                                <input type="hidden" name="id_tenagaKerja" value="{{ $item->id }}">
-
-                                                <div class="form-group mb-3">
-                                                    <label for="tenagaKerja">Pilih tenagaKerja</label>
-                                                    <div class="col-lg-3">
-                                                        <img src="{{ asset('storage/tenagaKerja/' . $item->image) }}"
-                                                            class="mb-3" height="150" alt="">
-                                                    </div>
-                                                    <input type="file" name="image" class="form-control">
-
-                                                    <input type="hidden" name="old_tenagaKerja"
-                                                        value="{{ $item->id }}">
-                                                </div>
-
-
-
-                                                <div class="form-group mb-3">
-                                                    <label for="tenagaKerja">Nama Kegiatan</label>
-                                                    <input type="text" name="nama" class="form-control">
-                                                </div>
-
-                                                <button type="submit" class="btn btn-primary">Update</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         @endforeach
                     </tbody>
                 </table>
@@ -125,7 +82,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="uploadModalLabel">Modal Upload</h5>
+                    <h5 class="modal-title" id="uploadModalLabel">Upload Tenaga Kerja</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
@@ -133,7 +90,7 @@
                     <form action="{{ route('tenagaKerja.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group mb-3">
-                            <label for="tenagaKerja">tenagaKerja</label>
+                            <label for="tenagaKerja">Tenaga Kerja</label>
                             <input type="file" name="image" class="form-control">
                         </div>
 
@@ -164,4 +121,62 @@
             </div>
         </div>
     </div>
+
+    {{-- for untuk tenagaKerja --}}
+    @foreach ($tenagaKerjas as $item)
+        <div class="modal fade" id="editModal{{ $item->id }}" tabindex="-1"
+            aria-labelledby="editModal{{ $item->id }}Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editModal{{ $item->id }}Label">Modal Edit Tenaga Kerja
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form action="{{ route('tenagaKerja.update', $item->id) }}" method="POST"
+                            enctype="multipart/form-data">
+                            @csrf
+
+                            <input type="hidden" name="id_tenagaKerja" value="{{ $item->id }}">
+
+                            <div class="form-group mb-3">
+                                <label for="tenagaKerja">Pilih tenagaKerja</label>
+                                <div class="col-lg-3">
+                                    <img src="{{ asset('storage/tenagaKerja/' . $item->image) }}" class="mb-3"
+                                        height="150" alt="">
+                                </div>
+                                <input type="file" name="image" class="form-control">
+
+                                <input type="hidden" name="old_tenagaKerja" value="{{ $item->id }}">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="tenagaKerja">Nama Kegiatan</label>
+                                <input type="text" name="nama" class="form-control">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="tenagaKerja">jabatan</label>
+                                <input type="text" name="jabatan" class="form-control">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="tenagaKerja">wali_kelas</label>
+                                <input type="text" name="wali_kelas" class="form-control">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="tenagaKerja">tanggal_lahir</label>
+                                <input type="date" name="tanggal_lahir" class="form-control">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="tenagaKerja">no_telpon</label>
+                                <input type="text" name="no_telpon" class="form-control">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
 @endsection

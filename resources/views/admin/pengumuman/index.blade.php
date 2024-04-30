@@ -5,6 +5,7 @@
         <div class="container col-xxl-8 py-5">
             <h4 class="fw-bold mb-3">Management Pengumuman</h4>
 
+            {{-- Tombol Buat pengumuman --}}
             <a href="{{ route('pengumumanDashboard.create') }}" class="btn btn-primary mb-3">Buat Pengumuman</a>
 
             {{-- Pesan Sukses --}}

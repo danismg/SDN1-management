@@ -68,45 +68,6 @@
                                     </form>
                                 </td>
                             </tr>
-                            <!-- Modal Edit -->
-                            <div class="modal fade" id="editModal{{ $item->id }}" tabindex="-1"
-                                aria-labelledby="editModal{{ $item->id }}Label" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="editModal{{ $item->id }}Label">Modal Edit</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-
-                                        <div class="modal-body">
-                                            <form action="{{ route('kontak.update', $item->id) }}" method="POST">
-                                                @csrf
-
-                                                <input type="hidden" name="id_kontak" value="{{ $item->id }}">
-
-                                                <div class="form-group mb-3">
-                                                    <input type="hidden" name="old_kontak" value="{{ $item->id }}">
-                                                </div>
-
-
-
-                                                <div class="form-group mb-3">
-                                                    <label for="mediasosial">Media Sosial</label>
-                                                    <input type="text" name="mediasosial" class="form-control">
-                                                </div>
-
-                                                <div class="form-group mb-3">
-                                                    <label for="akun">Nama Akun</label>
-                                                    <input type="text" name="akun" class="form-control">
-                                                </div>
-
-                                                <button type="submit" class="btn btn-primary">Update</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         @endforeach
                     </tbody>
                 </table>
@@ -142,4 +103,46 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Edit -->
+    @foreach ($kontak as $item)
+        <!-- Modal Edit -->
+        <div class="modal fade" id="editModal{{ $item->id }}" tabindex="-1" aria-labelledby="editModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editModal{{ $item->id }}Label">Modal Edit</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form action="{{ route('kontak.update', $item->id) }}" method="POST">
+                            @csrf
+
+                            <input type="hidden" name="id_kontak" value="{{ $item->id }}">
+
+                            <div class="form-group mb-3">
+                                <input type="hidden" name="old_kontak" value="{{ $item->id }}">
+                            </div>
+
+
+
+                            <div class="form-group mb-3">
+                                <label for="mediasosial">Media Sosial</label>
+                                <input type="text" name="mediasosial" class="form-control">
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="akun">Nama Akun</label>
+                                <input type="text" name="akun" class="form-control">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
 @endsection

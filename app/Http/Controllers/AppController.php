@@ -33,12 +33,7 @@ class AppController extends Controller
         ]);
     }
 
-    public function berita()
-    {
-        return view('berita/berita', [
-            'artikels' => Blog::orderBy('id', 'desc')->get()
-        ]);
-    }
+
     public function galeri()
     {
         return view('galery/galery', [
@@ -56,14 +51,6 @@ class AppController extends Controller
     {
         return view('tenagaKerja/tenagaKerja', [
             'tenagaKerjas' => TenagaKerja::orderBy('id', 'desc')->get()
-        ]);
-    }
-
-    public function detail($slug)
-    {
-        $artikel =  Blog::where('slug', $slug)->first();
-        return view('tenagaKerja/detail', [
-            'artikel' => $artikel
         ]);
     }
 

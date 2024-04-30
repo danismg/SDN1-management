@@ -69,54 +69,56 @@
                                     </form>
                                 </td>
                             </tr>
-                            <!-- Modal Edit -->
-                            <div class="modal fade" id="editModal{{ $item->id }}" tabindex="-1"
-                                aria-labelledby="editModal{{ $item->id }}Label" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="editModal{{ $item->id }}Label">Modal Edit</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-
-                                        <div class="modal-body">
-                                            <form action="{{ route('kegiatan.update', $item->id) }}" method="POST"
-                                                enctype="multipart/form-data">
-                                                @csrf
-
-                                                <input type="hidden" name="id_photo" value="{{ $item->id }}">
-
-                                                <div class="form-group mb-3">
-                                                    <label for="photo">Pilih Photo</label>
-                                                    <div class="col-lg-3">
-                                                        <img src="{{ asset('storage/kegiatan/' . $item->image) }}"
-                                                            class="mb-3" height="150" alt="">
-                                                    </div>
-                                                    <input type="file" name="image" class="form-control">
-
-                                                    <input type="hidden" name="old_photo" value="{{ $item->id }}">
-                                                </div>
-
-
-
-                                                <div class="form-group mb-3">
-                                                    <label for="photo">Nama Kegiatan</label>
-                                                    <input type="text" name="judul" class="form-control">
-                                                </div>
-
-                                                <button type="submit" class="btn btn-primary">Update</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         @endforeach
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
+
+    @foreach ($kegiatans as $item)
+        <!-- Modal Edit -->
+        <div class="modal fade" id="editModal{{ $item->id }}" tabindex="-1"
+            aria-labelledby="editModal{{ $item->id }}Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editModal{{ $item->id }}Label">Modal Edit</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form action="{{ route('kegiatan.update', $item->id) }}" method="POST"
+                            enctype="multipart/form-data">
+                            @csrf
+
+                            <input type="hidden" name="id_photo" value="{{ $item->id }}">
+
+                            <div class="form-group mb-3">
+                                <label for="photo">Pilih Photo</label>
+                                <div class="col-lg-3">
+                                    <img src="{{ asset('storage/kegiatan/' . $item->image) }}" class="mb-3"
+                                        height="150" alt="">
+                                </div>
+                                <input type="file" name="image" class="form-control">
+
+                                <input type="hidden" name="old_photo" value="{{ $item->id }}">
+                            </div>
+
+
+
+                            <div class="form-group mb-3">
+                                <label for="photo">Nama Kegiatan</label>
+                                <input type="text" name="judul" class="form-control">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
 
     <!-- Modal Upload -->
     <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
@@ -264,6 +266,51 @@
             </div>
         </div>
     </section>
+
+    @foreach ($fasilitas as $item)
+        <!-- Modal Edit -->
+        <div class="modal fade" id="editModal{{ $item->id }}" tabindex="-1"
+            aria-labelledby="editModal{{ $item->id }}Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editModal{{ $item->id }}Label">Modal Edit
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form action="{{ route('fasilitas.update', $item->id) }}" method="POST"
+                            enctype="multipart/form-data">
+                            @csrf
+
+                            <input type="hidden" name="id_photo" value="{{ $item->id }}">
+
+                            <div class="form-group mb-3">
+                                <label for="photo">Pilih Photo</label>
+                                <div class="col-lg-3">
+                                    <img src="{{ asset('storage/fasilitas/' . $item->image) }}" class="mb-3"
+                                        height="150" alt="">
+                                </div>
+                                <input type="file" name="image" class="form-control">
+
+                                <input type="hidden" name="old_photo" value="{{ $item->id }}">
+                            </div>
+
+
+
+                            <div class="form-group mb-3">
+                                <label for="photo">Nama Kegiatan</label>
+                                <input type="text" name="judul" class="form-control">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
 
     <!-- Modal Upload -->
     <div class="modal fade" id="uploadModalFasilitas" tabindex="-1" aria-labelledby="uploadModalFasilitasLabel"
