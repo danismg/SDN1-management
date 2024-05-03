@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\PengumumanController;
@@ -18,8 +19,9 @@ use App\Http\Controllers\VisiMisiController;
 
 Route::get('/', [AppController::class, 'index'])->name('home');
 
-Route::get('/berita', [AppController::class, 'berita'])->name('berita');
+
 Route::get('/sejarah', [AppController::class, 'sejarah'])->name('sejarah');
+Route::get('/berita', [AppController::class, 'berita'])->name('berita');
 Route::get('/visimisi', [AppController::class, 'visimisi'])->name('visimisi');
 Route::get('/kontak', [AppController::class, 'kontak'])->name('kontak');
 Route::get('/saran', [AppController::class, 'saran'])->name('saran');
@@ -113,6 +115,8 @@ Route::get('/pengumumanDashboard/edit/{id}', [PengumumanController::class, 'edit
 Route::post('/pengumumanDashboard/update/{id}', [PengumumanController::class, 'update'])->name('pengumumanDashboard.update')->middleware('auth');
 Route::post('/pengumumanDashboard/destroy/{id}', [PengumumanController::class, 'destroy'])->name('pengumumanDashboard.destroy')->middleware('auth');
 
+
+
 // prestasi
 Route::get('/prestasiDashboard', [PrestasiController::class, 'index'])->name('prestasiDashboard')->middleware('auth');
 Route::get('/prestasiDashboard/create', [PrestasiController::class, 'create'])->name('prestasiDashboard.create')->middleware('auth');
@@ -120,3 +124,12 @@ Route::post('/prestasiDashboard/store', [PrestasiController::class, 'store'])->n
 Route::get('/prestasiDashboard/edit/{id}', [PrestasiController::class, 'edit'])->name('prestasiDashboard.edit')->middleware('auth');
 Route::post('/prestasiDashboard/update/{id}', [PrestasiController::class, 'update'])->name('prestasiDashboard.update')->middleware('auth');
 Route::post('/prestasiDashboard/destroy/{id}', [PrestasiController::class, 'destroy'])->name('prestasiDashboard.destroy')->middleware('auth');
+
+
+// pengumuman
+Route::get('/beritaDashboard', [BeritaController::class, 'index'])->name('beritaDashboard')->middleware('auth');
+Route::get('/beritaDashboard/create', [BeritaController::class, 'create'])->name('beritaDashboard.create')->middleware('auth');
+Route::post('/beritaDashboard/store', [BeritaController::class, 'store'])->name('beritaDashboard.store')->middleware('auth');
+Route::get('/beritaDashboard/edit/{id}', [BeritaController::class, 'edit'])->name('beritaDashboard.edit')->middleware('auth');
+Route::post('/beritaDashboard/update/{id}', [BeritaController::class, 'update'])->name('beritaDashboard.update')->middleware('auth');
+Route::post('/beritaDashboard/destroy/{id}', [BeritaController::class, 'destroy'])->name('beritaDashboard.destroy')->middleware('auth');

@@ -74,6 +74,18 @@
                         </div>
                     </div>
                 </div>
+                {{-- Saran --}}
+                <div class="col-lg-4">
+                    <div class="card shadow-sm rounded-3 border-0" style="width: 20rem;">
+                        <img src="{{ asset('assets/images/il-photo-02.png') }}" class="card-img-top rounded-3"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Berita</h5>
+                            <p class="card-text">Atur dan kelola saran</p>
+                            <a href="{{ route('beritaDashboard') }}" class="btn btn-primary">detail</a>
+                        </div>
+                    </div>
+                </div>
 
                 {{-- Pengumuman --}}
                 <div class="col-lg-4">

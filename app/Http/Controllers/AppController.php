@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Berita;
 use App\Models\Blog;
 use App\Models\Fasilitas;
 use App\Models\Kegiatan;
@@ -73,6 +74,12 @@ class AppController extends Controller
     {
         return view('sejarah/sejarah', [
             'sejarah' => Sejarah::orderBy('id')->get()
+        ]);
+    }
+    public function berita()
+    {
+        return view('berita/berita', [
+            'berita' => Berita::orderBy('id')->get()
         ]);
     }
     public function kontak()
